@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+<div id="create-edit min-vh-100" class="my-5">
+
+
+    <div class="container" >
+        <div class="row justify-content-center">
+
+    <% if (locals.postId) {  %>
+        <div class="content col-12 col-xxl-8 col-xl-8 p-4 p-4">
+            <h1 class="pt-serif">Edit Post</h1>
+            <form action="/update" method="post">
+                <input class="form-control dark-form my-4" type="text" name="title" placeholder="Title" value="<%= title %>" required>
+                <textarea class="form-control dark-form" name="content" id="content" cols="30" rows="18" placeholder="Content" style="resize: none;"><%= content %>"</textarea>
+                <input hidden type="text" name="index" value="<%= postId %>">
+                <div class="text-end m-1">
+                    <input class="btn btn-light fs-5 btn-lg my-4 button-rad" type="submit" value="Update Post">
+                </div>
+            </form>
+        </div>
+    <% } else {  %>
+        <div class="content col-12 col-xxl-8 col-xl-8 p-4 p-4">
+            <h1 class="pt-serif">Create Post</h1>
+            <form action="/save" method="post">
+                <input class="form-control dark-form my-4" type="text" name="title" placeholder="Title" required>
+                <textarea class="form-control dark-form" name="content" id="content" cols="30" rows="18" placeholder="Content" style="resize: none;"></textarea>
+                <div class="text-end m-2">
+                    <input class="btn btn-light fs-5 btn-lg my-4 button-rad" type="submit" value="Create Post">
+                </div>
+            </form>
+        </div>
+        <div class="col-2 content ms-5 p-3 d-none d-lg-none d-md-none d-sm-none d-xl-block"  style="height: 245px;">
+            <p>Go on, post that quirky thought you've been nurturing in your mind – the internet's a wild jungle, and your ideas are like glitter in the foliage! 🌟🌿</p>
+        </div>
+    <% }  %>
+        </div>
+    </div>
+
+</div>
+
+
+<%- include("partials/footer.ejs") %>

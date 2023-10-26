@@ -1,0 +1,50 @@
+body {
+    background-color: #030303;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#create-edit {
+    height: 100%;
+}
+
+.content {
+    background-color: #1A1A1B;
+    color: #D6D9DB;
+    border-radius: 20px;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content a {
+    color: #D6D9DB;
+}
+
+.content a:hover {
+    color: #88939b;
+}
+
+.pt-serif {
+    font-family: 'PT Serif', serif;
+}
+
+footer a {
+    color: #D6D9DB !important;
+}
+
+.button-rad {
+    border-radius: 30px;
+}
+
+.dark-form {
+    background-color: #1A1A1B;
+    color: white !important;
+}
+.dark-form::placeholder {
+    color: #D7DADC;
+}
+.dark-form:focus {
+    background-color: #1A1A1B;
+    border-color: #88939b;
+}
